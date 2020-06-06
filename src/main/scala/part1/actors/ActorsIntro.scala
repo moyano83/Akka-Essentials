@@ -43,7 +43,7 @@ object ActorsIntro extends App{
   // This is legal but not recommended
   val namedWordProcess:ActorRef = actorSystem.actorOf(Props(new NamedWordProcess("Test")), "NamedProcessor")
 
-  // The recommended way to do this is through a companion object so the factory method creates the instances
+   // The recommended way to do this is through a companion object so the factory method creates the instances
   object NamedWordProcess{
     // This let the actor system
     def props(name:String): Props = Props(new NamedWordProcess("Test"))

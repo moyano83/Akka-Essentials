@@ -19,7 +19,7 @@ class SynchronousTestingSpec extends WordSpecLike with BeforeAndAfterAll{
   // it can be tested based on certain assumptions (synchronously)
   "A counter" should {
      "synchronously increase its counter" in {
-       val counter = TestActorRef[CounterActor](Props[CounterActor])
+       val counter = TestActorRef[CounterActor](Props[CounterActor]) // expects an implicit actor system
        // At this point CounterActor has already receive the message
        counter ! Increment
 

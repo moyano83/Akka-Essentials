@@ -98,6 +98,7 @@ object AskSpec{
       future.onComplete{
         // If we didn't store the sender in a separate val, as the future is executed in a separate thread, it will have
         // a different sender in this case (authDB).
+        // NEVER CALL METHODS OR ACCESS MUTABLE STATE IN CALLBACKS!!
         case Success(None) =>
           log.warning("User not found")
           originalSender ! AuthFailure("User not found") // don't use sender(). This is known as 'closing over'

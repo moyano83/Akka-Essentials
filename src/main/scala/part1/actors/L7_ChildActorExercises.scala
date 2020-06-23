@@ -2,7 +2,7 @@ package part1.actors
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 
-object ChildActorExercises extends App{
+object L7_ChildActorExercises extends App{
   /**
    * Exercise: Distributed word counting
    */

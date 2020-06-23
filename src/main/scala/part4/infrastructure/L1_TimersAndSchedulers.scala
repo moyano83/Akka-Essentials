@@ -3,7 +3,7 @@ import scala.concurrent.duration._
 import akka.actor.{Actor, ActorLogging, ActorSystem, Cancellable, Props, Timers}
 import akka.event.Logging
 
-object TimersAndSchedulers extends App{
+object L1_TimersAndSchedulers extends App{
   class SimpleActor extends Actor with ActorLogging{
     override def receive: Receive = {
       case msg => log.info(msg.toString)

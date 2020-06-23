@@ -2,7 +2,7 @@ package part1.actors
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 
-object ActorsIntro extends App{
+object L1_ActorsIntro extends App{
 
   // Part 1: actor system
   //The actor system is a heavy data structure which controls a bunch of threads under the hood which run actors

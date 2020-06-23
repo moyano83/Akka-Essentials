@@ -3,7 +3,7 @@ package part1.actors
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props}
 import com.typesafe.config.ConfigFactory
 
-object IntroAkkaConfig extends App {
+object L9_IntroAkkaConfig extends App {
   // There is multiple ways to pass akka configuration
   /**
    * Method 1: Inline configuration

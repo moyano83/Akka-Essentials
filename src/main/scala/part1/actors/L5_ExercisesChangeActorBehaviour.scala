@@ -1,9 +1,9 @@
 package part1.actors
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
-import part1.actors.ExercisesChangeActorBehaviour.Counter.Increment
+import part1.actors.L5_ExercisesChangeActorBehaviour.Counter.Increment
 
-object ExercisesChangeActorBehaviour extends App{
+object L5_ExercisesChangeActorBehaviour extends App{
   object Counter{
     case object Increment
     case object Decrement

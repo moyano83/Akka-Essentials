@@ -8,7 +8,7 @@ import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
 import scala.concurrent.duration._
 import scala.util.Random
 
-class TimedAssertionsSpec
+class L3_TimedAssertionsSpec
   extends TestKit(ActorSystem("TimedAssertions", ConfigFactory.load().getConfig("timedAssertionConfig")))
     with ImplicitSender
     with WordSpecLike
@@ -17,7 +17,7 @@ class TimedAssertionsSpec
   override def afterAll(): Unit = {
     TestKit.shutdownActorSystem(system)
   }
-  import TimedAssertionsSpec._
+  import L3_TimedAssertionsSpec._
 
   // Some times the actors takes a lot of time to reply if the workload is big
   "A worker actor" must {
@@ -60,7 +60,7 @@ class TimedAssertionsSpec
 
 }
 
-object TimedAssertionsSpec{
+object L3_TimedAssertionsSpec{
   case class WorkResult(code:Int)
   class WorkerActor extends Actor{
     override def receive: Receive = {

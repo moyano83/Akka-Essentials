@@ -1,9 +1,9 @@
 package part3.fault.tolerance
 
 import akka.actor.{Actor, ActorLogging, ActorSystem, PoisonPill, Props}
-import part3.fault.tolerance.ActorLifecycle.Parent.{CheckChild, FailChild}
+import part3.fault.tolerance.L2_ActorLifecycle.Parent.{CheckChild, FailChild}
 
-object ActorLifecycle extends App {
+object L2_ActorLifecycle extends App {
   object LifeCycleActor{
     case object StartChild
   }

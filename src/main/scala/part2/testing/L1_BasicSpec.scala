@@ -6,7 +6,7 @@ import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
 
 import scala.util.Random
 
-class BasicSpec extends TestKit(ActorSystem("BasicSpec"))
+class L1_BasicSpec extends TestKit(ActorSystem("BasicSpec"))
   // For scenarios send and reply scenarios with actors, it brings to scope the testActor, which is
   // the sender of all messages send in the test scenario
   with ImplicitSender
@@ -14,7 +14,7 @@ class BasicSpec extends TestKit(ActorSystem("BasicSpec"))
   with WordSpecLike
   with BeforeAndAfterAll {
 
-  import BasicSpec._
+  import L1_BasicSpec._
 
   override def afterAll(): Unit = {
     TestKit.shutdownActorSystem(system) // system is a member of testKit
@@ -83,7 +83,7 @@ class BasicSpec extends TestKit(ActorSystem("BasicSpec"))
 
 }
 
-object BasicSpec{ // To store all the methods and values to be used in the test
+object L1_BasicSpec{ // To store all the methods and values to be used in the test
   class SimpleActor extends Actor {
     override def receive: Receive = {
       case msg => sender() ! msg

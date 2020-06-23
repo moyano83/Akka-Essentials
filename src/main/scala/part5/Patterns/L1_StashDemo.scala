@@ -1,9 +1,9 @@
 package part5.Patterns
 
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props, Stash}
-import part5.Patterns.StashDemo.ResourceActor.Write
+import part5.Patterns.L1_StashDemo.ResourceActor.Write
 
-object StashDemo extends App {
+object L1_StashDemo extends App {
   /**
    * Stashes allows actors to set messages aside for later that they can't ot they  shouldn't process at a particular
    * point in time

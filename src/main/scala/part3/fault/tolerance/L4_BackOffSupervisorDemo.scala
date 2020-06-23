@@ -9,7 +9,7 @@ import akka.pattern.{Backoff, BackoffSupervisor}
 import scala.concurrent.duration._
 import scala.io.Source
 
-object BackOffSupervisorDemo extends App{
+object L4_BackOffSupervisorDemo extends App{
   /**
    * Problem: The repeated restart of actors (i.e. in case a resource is not available)
    * Backoff supervisor pattern introduces exponential Delays as well as randomness in

@@ -10,13 +10,13 @@ import scala.concurrent.duration._
 /**
  * Finite state machines is an alternative to context.become when the logic is complex to put it in a method
  */
-class FSMSpec extends TestKit(ActorSystem("FSMSystem"))
+class L3_FSMSpec extends TestKit(ActorSystem("FSMSystem"))
   with WordSpecLike
   with ImplicitSender
   with BeforeAndAfterAll
   with OneInstancePerTest{
 
-  import FSMSpec._
+  import L3_FSMSpec._
 
   override def afterAll(): Unit = TestKit.shutdownActorSystem(system)
 
@@ -90,7 +90,7 @@ class FSMSpec extends TestKit(ActorSystem("FSMSystem"))
   }
 }
 
-object FSMSpec {
+object L3_FSMSpec {
 
   val MACHINE_NOT_INITIALIZED = "Machine not initialized"
   val PRODUCT_NOT_AVAILABLE = "Product not available"

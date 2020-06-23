@@ -1,9 +1,9 @@
 package part1.actors
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
-import part1.actors.ChangingActorBehaviour.Mom.{Ask, Food, MomStart, VEGETABLE}
+import part1.actors.L4_ChangingActorBehaviour.Mom.{Ask, Food, MomStart, VEGETABLE}
 
-object ChangingActorBehaviour extends App{
+object L4_ChangingActorBehaviour extends App{
 
   object FussyKid{
     case object KidAccept

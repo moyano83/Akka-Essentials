@@ -4,7 +4,7 @@ import akka.actor.{Actor, ActorLogging, ActorSystem, PoisonPill, Props}
 import akka.dispatch.{ControlMessage, PriorityGenerator, UnboundedPriorityMailbox}
 import com.typesafe.config.{Config, ConfigFactory}
 
-object Mailboxes extends App{
+object L4_Mailboxes extends App{
   /**
    * Mailboxes are data structures in the actor references that stores messages
    */

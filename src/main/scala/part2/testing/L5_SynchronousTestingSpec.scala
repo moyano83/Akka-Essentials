@@ -7,14 +7,14 @@ import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
 import scala.concurrent.duration.Duration
 
 // Notice that we are not importing the test kit for synchronous test
-class SynchronousTestingSpec extends WordSpecLike with BeforeAndAfterAll{
+class L5_SynchronousTestingSpec extends WordSpecLike with BeforeAndAfterAll{
 
   // The actor system needs to be implicit so it is passed to the TestActorRef
   implicit val system = ActorSystem("SynchronousTest")
 
   override def afterAll(): Unit = system.terminate()
 
-  import SynchronousTestingSpec._
+  import L5_SynchronousTestingSpec._
   // Testing is all about predictability, akka provides some tools to assure that the actor has received some message so
   // it can be tested based on certain assumptions (synchronously)
   "A counter" should {
@@ -46,7 +46,7 @@ class SynchronousTestingSpec extends WordSpecLike with BeforeAndAfterAll{
   }
 }
 
-object SynchronousTestingSpec{
+object L5_SynchronousTestingSpec{
   case object Increment
   case object Read
   class CounterActor extends Actor{

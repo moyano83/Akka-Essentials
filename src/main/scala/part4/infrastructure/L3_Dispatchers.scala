@@ -7,7 +7,7 @@ import com.typesafe.config.ConfigFactory
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.Random
 
-object Dispatchers extends App{
+object L3_Dispatchers extends App{
   class Counter extends Actor with ActorLogging{
     var count = 0
     override def receive: Receive = {

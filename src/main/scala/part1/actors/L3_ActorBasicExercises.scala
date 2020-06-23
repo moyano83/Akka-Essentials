@@ -1,10 +1,10 @@
 package part1.actors
 
 import akka.actor.{Actor, ActorSystem, Props}
-import part1.actors.ActorBasicExercises.BankAccount.{Deposit, Statement, WithDraw}
-import part1.actors.ActorBasicExercises.Register.{Decrement, Increment}
+import part1.actors.L3_ActorBasicExercises.BankAccount.{Deposit, Statement, WithDraw}
+import part1.actors.L3_ActorBasicExercises.Register.{Decrement, Increment}
 
-object ActorBasicExercises extends App{
+object L3_ActorBasicExercises extends App{
 
   /**
    * 1 - Create a counter actor that when increment or decrement messages are passed it does increment its internal variable

@@ -2,7 +2,7 @@ package part3.fault.tolerance
 
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Kill, PoisonPill, Props, Terminated}
 
-object StartingStoppingActors extends App{
+object L1_StartingStoppingActors extends App{
    val system = ActorSystem("StoppingActorsDemo")
 
   object Parent{

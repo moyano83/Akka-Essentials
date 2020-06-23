@@ -8,8 +8,8 @@ import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
 import scala.concurrent.ExecutionContext
 import scala.util.{Failure, Success}
 
-class AskSpec extends TestKit(ActorSystem("AskSpec")) with ImplicitSender with WordSpecLike with BeforeAndAfterAll{
-  import AskSpec._
+class L2_AskSpec extends TestKit(ActorSystem("AskSpec")) with ImplicitSender with WordSpecLike with BeforeAndAfterAll{
+  import L2_AskSpec._
   override def afterAll(): Unit = TestKit.shutdownActorSystem(system)
 
   "An authenticator Manager" should{
@@ -45,7 +45,7 @@ class AskSpec extends TestKit(ActorSystem("AskSpec")) with ImplicitSender with W
     }
 }
 
-object AskSpec{
+object L2_AskSpec{
   //Assume this code is somewhere else in your App
   case class Read(key:String)
   case class Write(key:String, value:String)

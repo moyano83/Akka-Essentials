@@ -5,7 +5,7 @@ import akka.testkit.{EventFilter, ImplicitSender, TestKit}
 import com.typesafe.config.ConfigFactory
 import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
 
-class InterceptingLogsSpec extends TestKit(ActorSystem("InterceptingLogsSpec",
+class L4_InterceptingLogsSpec extends TestKit(ActorSystem("InterceptingLogsSpec",
   ConfigFactory.load().getConfig("eventFilterLoggingTestConfig")))
   with ImplicitSender
   with WordSpecLike
@@ -14,7 +14,7 @@ class InterceptingLogsSpec extends TestKit(ActorSystem("InterceptingLogsSpec",
   override def afterAll(): Unit = {
     TestKit.shutdownActorSystem(system)
   }
-  import InterceptingLogsSpec._
+  import L4_InterceptingLogsSpec._
   // Intercepting log messages is very useful in integration test when it is not that easy to create TestProbs between actors
   // This is shown in the test example below. It is hard to inject the probe actors since the Checkout actor instantiates
   // its own actors, also, the payment manager never sends out any message, for which we need to do the validation in
@@ -44,7 +44,7 @@ class InterceptingLogsSpec extends TestKit(ActorSystem("InterceptingLogsSpec",
     }
   }
 }
-object InterceptingLogsSpec{
+object L4_InterceptingLogsSpec{
   /**
    * You have a little online shop and you want to implement a check out flow in your online shop
    * When you want to send a message to the check out actor the check out

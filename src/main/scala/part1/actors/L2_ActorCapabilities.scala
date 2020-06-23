@@ -2,7 +2,7 @@ package part1.actors
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 
-object ActorCapabilities extends App{
+object L2_ActorCapabilities extends App{
 
   class SimpleActor extends Actor{
     override def receive: Receive = {

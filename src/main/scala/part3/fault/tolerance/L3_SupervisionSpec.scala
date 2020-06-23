@@ -5,10 +5,10 @@ import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, AllForOneStrategy
 import akka.testkit.{EventFilter, ImplicitSender, TestKit}
 import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
 
-class SupervisionSpec extends TestKit(ActorSystem("SupervisionSpec")) with WordSpecLike with ImplicitSender with BeforeAndAfterAll {
+class L3_SupervisionSpec extends TestKit(ActorSystem("SupervisionSpec")) with WordSpecLike with ImplicitSender with BeforeAndAfterAll {
 
   override def afterAll(): Unit = TestKit.shutdownActorSystem(system)
-  import SupervisionSpec._
+  import L3_SupervisionSpec._
   "A supervisor" should {
     "Resume its child in case of a minor fault" in {
       val supervisor = system.actorOf(Props[SupervisorCounter])
@@ -104,7 +104,7 @@ class SupervisionSpec extends TestKit(ActorSystem("SupervisionSpec")) with WordS
   }
 }
 
-object SupervisionSpec {
+object L3_SupervisionSpec {
 
   case object Report
   class SupervisorCounter extends Actor {

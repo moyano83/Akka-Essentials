@@ -7,12 +7,12 @@ import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
 import scala.concurrent.duration.Duration
 
 // TestProbs are special type of Actors with assertion capabilities
-class ProbsSpec extends TestKit(ActorSystem("ProbsSpec")) with ImplicitSender with WordSpecLike with BeforeAndAfterAll{
+class L2_ProbsSpec extends TestKit(ActorSystem("ProbsSpec")) with ImplicitSender with WordSpecLike with BeforeAndAfterAll{
 
   override def afterAll(): Unit = {
     TestKit.shutdownActorSystem(system)
   }
-  import ProbsSpec._
+  import L2_ProbsSpec._
 
   "A master actor" should {
     "register a slave" in {
@@ -64,7 +64,7 @@ class ProbsSpec extends TestKit(ActorSystem("ProbsSpec")) with ImplicitSender wi
   }
 }
 
-object ProbsSpec {
+object L2_ProbsSpec {
   /**
    * Word counting actor hierarchy with master slave
    * - Send some test to the master

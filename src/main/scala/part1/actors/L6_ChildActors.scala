@@ -1,10 +1,10 @@
 package part1.actors
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
-import part1.actors.ChildActors.CreditCard.{AttachToAccount, CheckStatus}
-import part1.actors.ChildActors.NaiveBankAccount.InitializeAccount
+import part1.actors.L6_ChildActors.CreditCard.{AttachToAccount, CheckStatus}
+import part1.actors.L6_ChildActors.NaiveBankAccount.InitializeAccount
 
-object ChildActors extends App {
+object L6_ChildActors extends App {
   object Parent{
     case class CreateChild(name:String)
     case class TellChild(message:String)
